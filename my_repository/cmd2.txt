@@ -1,0 +1,34 @@
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git commit -m "ajouter listes commandes"
+[main 66ee503] ajouter listes commandes
+ 1 file changed, 62 insertions(+)
+ create mode 100644 my_repository/cmd1.txt
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ cd module1
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ git commit -m "ajouter regression"
+[main 7f086aa] ajouter regression
+ 1 file changed, 1 insertion(+)
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ touch fichierlambda.txt
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ git commit -m "ajouter fichier lambda"
+[main 56abe74] ajouter fichier lambda
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 my_repository/module1/fichierlambda.txt
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ cd ..
