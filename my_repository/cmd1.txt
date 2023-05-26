@@ -1,0 +1,62 @@
+
+Administrateur@S02-02-T3420 MINGW64 ~
+$ git clone https://github.com/Wirginie/TPreset
+Cloning into 'TPreset'...
+warning: You appear to have cloned an empty repository.
+
+Administrateur@S02-02-T3420 MINGW64 ~
+$ cd TPreset
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset (main)
+$ mkdir my_repository
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset (main)
+$ cd my_repository/
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git commit -m "créer rep ori"
+[main (root-commit) 054bde4] créer rep ori
+ 2 files changed, 12 insertions(+)
+ create mode 100644 my_repository/README.md
+ create mode 100644 my_repository/main.py.txt
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ mkdir module1
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ cd module1
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ git commit -m "créer rep module1"
+[main 5ed4f57] créer rep module1
+ 2 files changed, 3 insertions(+)
+ create mode 100644 my_repository/module1/__init__.py
+ create mode 100644 my_repository/module1/file1.py
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module1 (main)
+$ cd ..
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ mkdir module2
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ cd module2
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module2 (main)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module2 (main)
+$ git commit -m "créer rep module2"
+[main 942d404] créer rep module2
+ 2 files changed, 3 insertions(+)
+ create mode 100644 my_repository/module2/__init__.py
+ create mode 100644 my_repository/module2/file2.py
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository/module2 (main)
+$ cd ..
