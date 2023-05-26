@@ -1,0 +1,218 @@
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git branch cherry
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git checkout cherry
+Switched to branch 'cherry'
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git cherry-pick 56abe
+error: The following untracked working tree files would be overwritten by merge:
+        my_repository/module1/fichierlambda.txt
+Please move or remove them before you merge.
+Aborting
+fatal: cherry-pick failed
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git status
+On branch cherry
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cmd2.txt
+        module1/fichierlambda.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git add .
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git status
+On branch cherry
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   cmd2.txt
+        new file:   module1/fichierlambda.txt
+
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git commit -m "modifs"
+[cherry c5e6bdb] modifs
+ 2 files changed, 34 insertions(+)
+ create mode 100644 my_repository/cmd2.txt
+ create mode 100644 my_repository/module1/fichierlambda.txt
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git cherry-pick 56abe
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch cherry
+You are currently cherry-picking commit 56abe74.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry|CHERRY-PICKING)
+$  git commit --allow-empty  56abe
+fatal: cannot do a partial commit during a cherry-pick.
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry|CHERRY-PICKING)
+$ git cherry-pick 56abe --allow-empty
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch cherry
+You are currently cherry-picking commit 56abe74.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry|CHERRY-PICKING)
+$  git commit --allow-empty
+[cherry 4b0bebc] ajouter fichier lambda
+ Date: Fri May 26 11:31:13 2023 +0200
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git cherry-pick d5a165
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch cherry
+You are currently cherry-picking commit d5a165b.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry|CHERRY-PICKING)
+$  git commit --allow-empty
+[cherry cd5e531] ajouter fichier cmd2
+ Date: Fri May 26 11:32:52 2023 +0200
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git log
+commit cd5e531fab27dc666b0b277d428f9fadaf084450 (HEAD -> cherry)
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:32:52 2023 +0200
+
+    ajouter fichier cmd2
+
+commit 4b0bebca783da56aae411ceafd91597bdc290909
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:31:13 2023 +0200
+
+    ajouter fichier lambda
+
+commit c5e6bdba8d20e593ecfe43a914e4c69dca64d61a
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:49:39 2023 +0200
+
+    modifs
+
+commit 66ee5037f477c7969d0f7e8b876111812d896104 (main)
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:28:09 2023 +0200
+
+    ajouter listes commandes
+
+commit 942d40484912331e3981775d0e27c779f4d8feeb
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:24:33 2023 +0200
+
+    créer rep module2
+
+commit 5ed4f57778f996d1594d4385dc99377320fbe0c9
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:23:29 2023 +0200
+
+    créer rep module1
+
+commit 054bde40a9b787cb465c949c53bf4bf6a8a26fcd
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:22:08 2023 +0200
+
+    créer rep ori
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (cherry)
+$ git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git merge cherry
+Updating 66ee503..cd5e531
+Fast-forward
+ my_repository/cmd2.txt                  | 34 +++++++++++++++++++++++++++++++++
+ my_repository/module1/fichierlambda.txt |  0
+ 2 files changed, 34 insertions(+)
+ create mode 100644 my_repository/cmd2.txt
+ create mode 100644 my_repository/module1/fichierlambda.txt
+
+Administrateur@S02-02-T3420 MINGW64 ~/TPreset/my_repository (main)
+$ git log
+commit cd5e531fab27dc666b0b277d428f9fadaf084450 (HEAD -> main, cherry)
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:32:52 2023 +0200
+
+    ajouter fichier cmd2
+
+commit 4b0bebca783da56aae411ceafd91597bdc290909
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:31:13 2023 +0200
+
+    ajouter fichier lambda
+
+commit c5e6bdba8d20e593ecfe43a914e4c69dca64d61a
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:49:39 2023 +0200
+
+    modifs
+
+commit 66ee5037f477c7969d0f7e8b876111812d896104
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:28:09 2023 +0200
+
+    ajouter listes commandes
+
+commit 942d40484912331e3981775d0e27c779f4d8feeb
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:24:33 2023 +0200
+
+    créer rep module2
+
+commit 5ed4f57778f996d1594d4385dc99377320fbe0c9
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:23:29 2023 +0200
+
+    créer rep module1
+
+commit 054bde40a9b787cb465c949c53bf4bf6a8a26fcd
+Author: virginie <virginie.voldoire@gmail.com>
+Date:   Fri May 26 11:22:08 2023 +0200
+
+    créer rep ori
+
